@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+ body {
+     margin: 0;
+ }
+
+ .ui.fixed.menu, .ui.top.fixed.menu{
+    display: flex;
+ }
+
+ .ui.icon.input{
+     margin-left: 1150px;
+     margin-top:7px;
+ }
+
+ body.pushable {
+    background: #cce2ff !important;
+}
+
+#signup{
+    margin-top: 50px;
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+}
+
+#login{
+    margin-top: 50px;
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+}

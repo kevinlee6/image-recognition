@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div class="ui vertical inverted left visible sidebar menu">
+    <div class="ui sidebar vertical left inverted menu">
       <img class="ui medium circular image" src="/images/wireframe/square-image.png">
       <a class="item">
         Home
@@ -30,18 +30,26 @@
         Sign Out
       </a>
     </div>
+    <div class="ui basic icon top fixed menu" style= "background-color: #2D93AD;">
+      <a id="toggle" class="item">
+        <i class="sidebar icon"></i>
+        Menu
+        </a>
+        <div class="ui fluid category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="SEARCH">
+          <i class="search icon"></i>
+        </div>
+        <div class="results">
+    </div>
+    </div>
+   </div>
+   
     <div class="pusher">
       <!-- Site content !-->
-    </div>
+    
     <%= yield %>
-    <div class="ui fluid category search">
-      <div class="ui icon input">
-        <input class="prompt" type="text" placeholder="SEARCH">
-        <i class="search icon"></i>
-      </div>
-      <div class="results">
-
-      </div>
+     
     </div>
     <script>
   
