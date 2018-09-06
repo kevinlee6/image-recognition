@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div class="ui left vertical menu sidebar">
+    <div class="ui sidebar vertical left inverted menu">
       <img class="ui medium circular image" src="/images/wireframe/square-image.png">
       <a class="item">Home</a>
       <a class="item">Profile</a>
@@ -20,20 +20,33 @@
       <a class="item">FAQ</a>
       <a class="item">Sign Out</a>
     </div>
+    <div class="ui basic icon top fixed menu" style= "background-color: #2D93AD;">
+      <a id="toggle" class="item">
+        <i class="sidebar icon"></i>
+        Menu
+        </a>
+        <div class="ui fluid category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="SEARCH">
+          <i class="search icon"></i>
+        </div>
+        <div class="results">
+    </div>
+    </div>
+   </div>
+   
     <div class="pusher">
       <!-- Site content !-->
-    </div>
+    
     <%= yield %>
-    <div class="ui fluid category search">
-      <div class="ui icon input">
-        <input class="prompt" type="text" placeholder="SEARCH">
-        <i class="search icon"></i>
-      </div>
-      <div class="results">
-
-      </div>
+     
     </div>
-
+    <script>
+  
+    $('#toggle').click(function(){
+      $('.ui.sidebar').sidebar('toggle');
+    });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
   </body>
