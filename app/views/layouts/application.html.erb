@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div class="ui left vertical menu sidebar">
+    <div class="ui vertical inverted left visible sidebar menu">
       <img class="ui medium circular image" src="/images/wireframe/square-image.png">
       <a class="item">
         Home
@@ -43,7 +43,12 @@
 
       </div>
     </div>
-
+    <script>
+  
+    $('#toggle').click(function(){
+      $('.ui.sidebar').sidebar('toggle');
+    });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
   </body>
