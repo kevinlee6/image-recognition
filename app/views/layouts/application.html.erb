@@ -12,6 +12,7 @@
   </head>
 
   <body>
+  <% if current_user %>
     <div class="ui sidebar vertical left inverted menu">
       <img class="ui medium circular image" src="/images/wireframe/square-image.png">
       <a class="item">Home</a>
@@ -20,11 +21,13 @@
       <a class="item">FAQ</a>
       <a class="item">Sign Out</a>
     </div>
+    
     <div class="ui basic icon top fixed menu" style= "background-color: #2D93AD;">
       <a id="toggle" class="item">
         <i class="sidebar icon"></i>
         Menu
         </a>
+        <%end%>
         <div class="ui fluid category search">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="SEARCH">
