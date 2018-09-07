@@ -12,7 +12,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -62,3 +62,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# CSS/SASS Styling, Font Awesome icons and dependencies
+gem 'bootstrap', '~> 4.1.3'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'railties', '~> 5.2', '>= 5.2.1'
+gem 'sprockets-rails', '~> 3.2.1'
+gem 'popper_js', '~> 1.9', '>= 1.9.9'
+gem 'jquery-easing-rails', '~> 0.0.2'
+gem 'bootstrap_form', '~> 2.3'

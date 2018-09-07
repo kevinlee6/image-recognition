@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,11 +14,12 @@
 
   <body>
     <div class="ui sidebar vertical left inverted menu">
-      <a class="item">Home</a>
-      <a class="item">Profile</a>
-      <a class="item">Gallery</a>
-      <a class="item">FAQ</a>
-      <a class="item">Sign Out</a>
+      <img class="ui medium circular image" src="/images/wireframe/square-image.png">
+      <a class="item" href="/">Home</a>
+      <a class="item" href="/profile">Profile</a>
+      <a class="item" href="/gallery">Gallery</a>
+      <a class="item" href="/faq">FAQ</a>
+      <a class="item" href="/signout">Sign Out</a>
     </div>
     
     <div class="top-nav">
@@ -49,6 +51,11 @@
 <!--      temporary fix: margin top set to 10%-->
       <%= yield %>
     </div>
+
+    <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+      </a>
 
     <script>
       $('#toggle').click(function(){
