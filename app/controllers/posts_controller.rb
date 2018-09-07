@@ -1,4 +1,13 @@
 class PostsController < ApplicationController
+  # Imports the Google Cloud client library
+  require "google/cloud/vision"
+
+  # Your Google Cloud Platform project ID
+  project_id = "YOUR_PROJECT_ID"
+
+  # Instantiates a client
+  vision = Google::Cloud::Vision.new project: project_id
+
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -26,6 +35,17 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+
+    # # The name of the image file to annotate
+    # file_name =
+    #
+    # # Performs label detection on the image file
+    # labels = vision.image(file_name).labels
+    #
+    # puts "Labels:"
+    # labels.each do |label|
+    #   puts label.description
+    # end
 
     respond_to do |format|
       if @post.save
