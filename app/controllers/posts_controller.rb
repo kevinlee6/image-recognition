@@ -3,10 +3,10 @@ class PostsController < ApplicationController
   require "google/cloud/vision"
 
   # Your Google Cloud Platform project ID
-  project_id = "YOUR_PROJECT_ID"
+  # project_id = ENV["GOOGLE_APPLICATION_CREDENTIALS"]
 
-  # Instantiates a client
-  vision = Google::Cloud::Vision.new project: project_id
+  # # Instantiates a client
+  # @vision = Google::Cloud::Vision.new project: project_id
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -35,17 +35,20 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    project_id = ENV["GOOGLE_APPLICATION_CREDENTIALS"]
 
-    # # The name of the image file to annotate
-    # file_name =
-    #
-    # # Performs label detection on the image file
-    # labels = vision.image(file_name).labels
-    #
-    # puts "Labels:"
-    # labels.each do |label|
-    #   puts label.description
-    # end
+    # Instantiates a client
+    @vision = Google::Cloud::Vision.new project: project_id
+    # The name of the image file to annotate
+    file_name = rails_blob_url(@post.image)
+    pp file_name
+    # Performs label detection on the image file
+    labels = @vision.image(file_name).labels
+    
+    puts "Labels:"
+    labels.each do |label|
+      puts label.description
+    end
 
     respond_to do |format|
       if @post.save
