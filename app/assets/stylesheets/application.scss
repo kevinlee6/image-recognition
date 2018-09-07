@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+    margin:0;
+}
+.top-nav{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #1ab7ea;
+   padding-left:10px;
+   padding-right:10px;
+   margin:0;
+}
+
+#toggle {
+    padding:13px;
+    flex-direction: column;
+    text-align: center;
+    cursor:pointer;
+    .menutext {
+        color:white;
+        font-size:15px;
+        margin-top:2px;
+    }
+}
+
+.logo {
+    font-size:24px;
+    color:white;
+    margin:0;
+    flex: 1 1 auto;
+    padding:10px;
+}
+
+#toggle:hover {
+    background-color: #11a5d6;
+}
+
+.ui.icon.input, .ui.fluid.category.search {
+//    margin-left: 1150px;
+//    margin-top:7px; 
+    
+    height:45px;
+    font-size:15px;
+}
+
+body.pushable {
+   background: #cce2ff !important;
+}
+
+#content {
+   padding:20px;
+}
+
+#signup{
+   margin-top: 50px;
+   margin: auto;
+   margin-top: 100px;
+   width: 300px;
+}
+
+#login{
+   margin-top: 50px;
+   margin: auto;
+   margin-top: 100px;
+   width: 300px;
+}
