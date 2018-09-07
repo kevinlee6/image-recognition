@@ -1,7 +1,4 @@
-<div class="content">
-<div class="ui card">
-<% if @user %>
-  <div class="content">
+<% if @profile %>
     <%# if current_user %>
       <%#= form_for(@user) do |f| %>
         <%#= f.file_field :image %>
@@ -9,34 +6,33 @@
       <%# end %>
     <%# end %>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCenter">
-      Edit Profile
-    </button>
+    <% if current_user == @profile %>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCenter">
+        Edit Profile
+      </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle">Edit Profile</h5>
-            <button type="button" class="cancel" data-dismiss="modal" aria-label="Cancel">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Edit Profile</button>
-            <button type="button" class="btn btn-primary">Cancel</button>
+      <!-- Modal -->
+      <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLongTitle">Edit Profile</h5>
+              <button type="button" class="cancel" data-dismiss="modal" aria-label="Cancel">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Edit Profile</button>
+              <button type="button" class="btn btn-primary">Cancel</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-</div>
+    <% end %>
 <% else %>
   <p>This user does not exist!</p>
 <% end %>
