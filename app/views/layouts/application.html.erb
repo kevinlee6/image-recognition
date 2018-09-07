@@ -22,22 +22,36 @@
       <a class="item" href="/signout">Sign Out</a>
     </div>
     
-    <div class="ui basic icon top fixed menu" style= "background-color: #2D93AD;">
+    <div class="top-nav">
+      
       <a id="toggle" class="item">
-        <i class="sidebar icon"></i>
-        Menu
+        <i class="big white sidebar icon"></i>
+        <p class="menutext">Menu</p>
       </a>
+
+      <p class="logo">PIXAPI</p>
+      <div class="ui large buttons">
+      <% if current_user %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "signout ui inverted button"%> 
+     <%else%>
+      
+      <a href="/users/sign_in"><button class="ui inverted button">Sign in</button></a>
+      <div class="or"></div>
+      <a href="/users/sign_up"<button class="ui inverted button">Sign up</button></a>
+      <%end%>
+    </div>
+      
       <div class="ui fluid category search">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="SEARCH">
-          <i class="search icon"></i>
+          <i class="large search icon"></i>
         </div>
         <div class="results">
         </div>
       </div>
    </div>
    
-    <div id="content">
+    <div id="content" class="pusher">
       <!-- Site content !-->
 <!--      temporary fix: margin top set to 10%-->
       <%= yield %>

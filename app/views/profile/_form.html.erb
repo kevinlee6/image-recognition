@@ -1,0 +1,9 @@
+<h5>Add image</h5>
+<%= form_with(model: @user) do |f| %>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit 'Submit' %>
+<% end %>
