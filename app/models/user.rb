@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   attr_writer :login
 
+  validates :username, presence: :true, uniqueness: { case_sensitive: false }
+  validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+
+
   def login
     @login || self.username || self.email
   end
