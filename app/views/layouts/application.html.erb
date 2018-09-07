@@ -31,9 +31,14 @@
 
       <p class="logo">PIXAPI</p>
       <div class="ui large buttons">
+      <% if current_user %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "signout ui inverted button"%> 
+     <%else%>
+      
       <a href="/users/sign_in"><button class="ui inverted button">Sign in</button></a>
       <div class="or"></div>
-      <button class="ui inverted button">Sign up</button>
+      <a href="/users/sign_up"<button class="ui inverted button">Sign up</button></a>
+      <%end%>
     </div>
       
       <div class="ui fluid category search">
