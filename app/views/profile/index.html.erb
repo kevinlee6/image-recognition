@@ -1,4 +1,4 @@
-<% if @user %>
+<% if @profile %>
     <%# if current_user %>
       <%#= form_for(@user) do |f| %>
         <%#= f.file_field :image %>
@@ -6,7 +6,7 @@
       <%# end %>
     <%# end %>
 
-    <% if current_user == @user %>
+    <% if current_user == @profile %>
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCenter">
         Edit Profile
