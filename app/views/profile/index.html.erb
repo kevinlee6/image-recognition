@@ -1,5 +1,7 @@
+<div class="content">
+<div class="ui card">
 <% if @user %>
-  <div class="pusher">
+  <div class="content">
     <%# if current_user %>
       <%#= form_for(@user) do |f| %>
         <%#= f.file_field :image %>
@@ -33,6 +35,8 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 <% else %>
   <p>This user does not exist!</p>
 <% end %>
