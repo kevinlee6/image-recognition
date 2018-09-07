@@ -1,0 +1,12 @@
+<%# if current_user %>
+  <%#= form_for(@user) do |f| %>
+    <%#= f.text_field :name %>
+    <%#= f.date_field :date_of_birth %>
+    <%#= f.text_field :username %>
+    <%#= f.email_field :email %>
+    <%#= f.password_field :password %>
+    <%#= f.file_field :avatar %>
+    <%#= f.file_field :upload, multiple: false %>
+    <%#= f.submit "Edit Profile" %>     <%#= f.button "Cancel" %>
+  <%# end %>
+<%# end %>
