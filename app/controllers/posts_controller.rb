@@ -40,7 +40,7 @@ class PostsController < ApplicationController
     # Instantiates a client
     @vision = Google::Cloud::Vision.new project: project_id
     # The name of the image file to annotate
-    file_name = rails_blob_url(@post.image)
+    file_name = polymorphic_url(@post.image)
     pp file_name
     # Performs label detection on the image file
     labels = @vision.image(file_name).labels
