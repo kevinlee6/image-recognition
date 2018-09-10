@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/:profile/new', to: 'posts#new'
   post '/:profile/new', to: 'posts#create'
   root 'page#home'
+  get '/page/faq', to: 'page#faq'
+  get 'page/gallery', to: 'page#gallery'
 end

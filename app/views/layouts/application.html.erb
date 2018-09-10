@@ -20,9 +20,9 @@
       <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/jenny.jpg" style="bottom:-52px;">
       <a class="item" href="/">Home</a>
       <a class="item" href="/profile">Profile</a>
-      <a class="item" href="/gallery">Gallery</a>
-      <a class="item" href="/faq">FAQ</a>
-      <a class="item" href="/signout">Sign Out</a>
+      <a class="item" href="/page/gallery">Gallery</a>
+      <a class="item" href="/page/faq">FAQ</a>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "item"%> 
     </div>
     
     <div class="top-nav">
