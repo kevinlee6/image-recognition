@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>PIXAPI</title>
+    <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path( 'logoo.ico' ) %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  
     <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,6 +15,7 @@
   </head>
 
   <body>
+  
     <div class="ui sidebar vertical left inverted menu">
       <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/jenny.jpg" style="bottom:-52px;">
       <a class="item" href="/">Home</a>
@@ -24,11 +26,14 @@
     </div>
     
     <div class="top-nav">
-      
+    <%if current_user %>
       <a id="toggle" class="item">
         <i class="big white sidebar icon"></i>
         <p class="menutext">Menu</p>
       </a>
+      <% else%>
+      <img src="<%= asset_path( 'mainlogo.png' ) %>" width='69' height='69' id='mainlogo'>
+      <%end%>
 
       <p class="logo">PIXAPI</p>
       <div class="ui large buttons">
