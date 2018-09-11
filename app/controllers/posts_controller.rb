@@ -46,7 +46,7 @@ class PostsController < ApplicationController
 
     # Create Tags
     5.times do |i|
-      @post.tags << Tag.create(tag: labels[i].description)
+      labels[i] && @post.tags << Tag.create(tag: labels[i].description)
     end
 
     respond_to do |format|
