@@ -16,7 +16,7 @@
 body {
     margin:0px !important;
 }
-.top-nav{
+.top-nav {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -84,8 +84,8 @@ body.pushable {
 .ui.card {
   margin-left: auto;
   margin-right: auto;
-  height: 500px;
-  width: 800px;
+  height: 600px;
+  width: 735px;
 }
 
 .ui.vertical.inverted.menu .item:before {
@@ -144,11 +144,15 @@ body.pushable {
     margin-right: auto;
 }
 
-#mainlogo{
+#mainlogo {
     padding: 5px;
+    margin-left: 6px;
+    margin-bottom: 2px;
+    height: 69px;
+    width: 69px;
 }
 
-#welcome{
+#welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,7 +163,7 @@ body.pushable {
     margin-top: 100px;
     width: auto;
 }
-#wlc{
+#wlc {
     padding: 20px;
 }
 
