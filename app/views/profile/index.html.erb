@@ -1,5 +1,10 @@
-<% @profile.posts.each do |post| %>
-  <%= image_tag post.image.service_url %>
+<% @profile && @profile.posts.each do |post| %>
+  <div>
+    <%= image_tag post.image.service_url %>
+    <% post.tags.each do |tag| %>
+      <%= button_tag tag.tag, class: 'ui primary button' %>
+    <% end %>
+  </div>
 <% end %>
 
 <% if @profile %>

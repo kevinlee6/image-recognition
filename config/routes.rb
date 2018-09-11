@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   post '/:profile/new', to: 'posts#create'
   root 'page#home'
   get '/page/faq', to: 'page#faq'
-  get 'page/gallery', to: 'page#gallery'
+  get '/page/gallery', to: 'page#gallery'
 end
