@@ -8,6 +8,7 @@ class TagsController < ApplicationController
       fulltext params[:search]
     end
     @tags = @search.results
+  
     
   end
 

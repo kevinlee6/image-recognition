@@ -46,11 +46,21 @@
       <a href="/users/sign_up"<button class="ui inverted button">Sign up</button></a>
       <% end %>
     </div>
+
+  <div class="ui simple dropdown item">
+      Search for
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">User</div>
+      <div class="item">Tag</div>
+    </div>
+  
+</div>
       <%= form_tag tags_path, :method => :get do %>
       <div class="ui fluid category search">
         <div class="ui icon input">
         <%= text_field_tag :search, params[:search], :class=>"prompt"%>
-          <%= submit_tag "", :name => nil, :class=> "large search icon" %>
+          <%= submit_tag "Go" %>
           
         </div>
         <%end%>
