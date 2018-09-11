@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB --> <!-- For the carousel -->
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  
+
     <div class="ui sidebar vertical left inverted menu">
       <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/jenny.jpg" style="bottom:-52px;">
       <a class="item" href="/">Home</a>
       <%if current_user %>
-      <a class="item" href="/<%= current_user.username%>">Profile</a>
-      <% end %>
-      <a class="item" href="/page/gallery">Gallery</a>
+        <a class="item" href="/<%= current_user.username%>">Profile</a>
+      <%end%>
       <a class="item" href="/page/faq">FAQ</a>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "item"%> 
     </div>
@@ -62,7 +61,9 @@
    
     <div id="content" class="pusher">
       <!-- Site content !-->
-<!--      temporary fix: margin top set to 10%-->
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
       <%= yield %>
     </div>
 

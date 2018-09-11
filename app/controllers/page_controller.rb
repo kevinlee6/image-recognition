@@ -4,7 +4,4 @@ class PageController < ApplicationController
 
   def faq
   end
-
-  def gallery
-  end
 end
