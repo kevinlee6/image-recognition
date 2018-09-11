@@ -2,30 +2,17 @@
 
 <h1><%= @tags[0].tag%></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-  <div class="ui three stackable cards">
-    <% @tags.each do |tag| %>
-      <% tag.posts.each do |post| %>
-        <div class="card">
-      <div class="image">
-        <%= image_tag post.image.service_url %>
+<div class="ui three stackable cards">
+  <% @tags.each do |tag| %>
+    <% tag.posts.each do |post| %>
+      <div class="card">
+        <div class="image">
+          <%= image_tag post.image.service_url %>
+        </div>
       </div>
-    
-        <%end%>
-      
-    
-    
     <% end %>
-  </tbody>
-</table>
-
+  <% end %>
+</div>
 <br>
 
 <%= link_to 'New Tag', new_tag_path %>
