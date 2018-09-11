@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>PIXAPI</title>
-    <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path( 'logoo.ico' ) %>">
+    <link rel="shortcut icon" type="image/png" href="<%= asset_path('Logo.png') %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
   
-    <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB --> <!-- For the carousel -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,32 +20,32 @@
       <a class="item" href="/">Home</a>
       <%if current_user %>
       <a class="item" href="/<%= current_user.username%>">Profile</a>
-      <%end%>
+      <% end %>
       <a class="item" href="/page/gallery">Gallery</a>
       <a class="item" href="/page/faq">FAQ</a>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "item"%> 
     </div>
     
     <div class="top-nav">
-    <%if current_user %>
+    <% if current_user %>
       <a id="toggle" class="item">
         <i class="big white sidebar icon"></i>
         <p class="menutext">Menu</p>
       </a>
-      <% else%>
-      <img src="<%= asset_path( 'mainlogo.png' ) %>" width='69' height='69' id='mainlogo'>
-      <%end%>
+      <% else %>
+      <% end %>
 
+      <%= link_to image_tag('Logo.png', width: '69', height: '69'), "/" %>
       <p class="logo">PIXAPI</p>
       <div class="ui large buttons">
       <% if current_user %>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "signout ui inverted button"%> 
-     <%else%>
+     <% else %>
       
       <a href="/users/sign_in"><button class="ui inverted button">Sign in</button></a>
       <div class="or"></div>
       <a href="/users/sign_up"<button class="ui inverted button">Sign up</button></a>
-      <%end%>
+      <% end %>
     </div>
       
       <div class="ui fluid category search">
@@ -70,5 +70,8 @@
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- For the carousel -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB --> <!-- For the carousel -->
   </body>
 </html>
