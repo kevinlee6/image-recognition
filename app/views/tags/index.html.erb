@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tags</h1>
+<h1><%= @tags[0].tag%></h1>
 
 <table>
   <thead>
@@ -10,12 +10,18 @@
   </thead>
 
   <tbody>
+  <div class="ui three stackable cards">
     <% @tags.each do |tag| %>
-      <tr>
-        <td><%= link_to 'Show', tag %></td>
-        <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
-        <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% tag.posts.each do |post| %>
+        <div class="card">
+      <div class="image">
+        <%= image_tag post.image.service_url %>
+      </div>
+    
+        <%end%>
+      
+    
+    
     <% end %>
   </tbody>
 </table>
