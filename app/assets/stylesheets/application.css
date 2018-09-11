@@ -1,0 +1,191 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  margin: 0;
+}
+
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1ab7ea;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+#toggle {
+  padding: 13px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+}
+
+#toggle .menutext {
+  color: white;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 10px;
+}
+
+#toggle:hover {
+  background-color: #11a5d6;
+}
+
+.ui.icon.input, .ui.fluid.category.search {
+  height: 45px;
+  font-size: 15px;
+}
+
+body.pushable {
+  background: #cce2ff !important;
+}
+
+#content {
+  padding: 20px;
+}
+
+#signup {
+  margin-top: 50px;
+  margin: auto;
+  margin-top: 100px;
+  width: 300px;
+}
+
+#login {
+  margin-top: 50px;
+  margin: auto;
+  margin-top: 100px;
+  width: 300px;
+}
+
+.ui.card {
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 800px;
+}
+
+.ui.vertical.inverted.menu .item:before {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.ui.inverted.menu .item:before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.ui.vertical.menu .item:before {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, 0)), color-stop(1.5em, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1.5em, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 1.5em, rgba(0, 0, 0, 0) 100%);
+}
+
+.ui.menu .item:before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.ui.inverted.menu .item {
+  text-align: center;
+}
+
+.ui.medium.circular.image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui.menu .item {
+  font-size: 1.5rem;
+  bottom: -70px;
+}
+
+.ui.medium.image {
+  width: 180px;
+}
+
+.ui.buttons {
+  margin-right: 1.8rem;
+}
+
+.ui.fluid.category.search {
+  margin-right: 1rem;
+}
+
+.carousel-control-prev a:visited {
+  color: none;
+}
+
+.pic {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mainlogo {
+  padding: 5px;
+}
+
+#welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1ab7ea;
+  height: 400px;
+  padding: 10px;
+  margin-top: 100px;
+  width: auto;
+}
+
+#wlc {
+  padding: 20px;
+}
+/*# sourceMappingURL=application.css.map */
