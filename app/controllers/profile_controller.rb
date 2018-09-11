@@ -1,6 +1,7 @@
 class ProfileController < ApplicationController
   before_action :set_profile, only: [:index, :new, :create]
   def index
+    @posts = @profile.posts.order 'created_at desc'
   end
 
   def new

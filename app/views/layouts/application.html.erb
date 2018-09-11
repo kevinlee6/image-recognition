@@ -37,13 +37,10 @@
       <%= link_to image_tag('Logo.png', width: '69', height: '69'), "/" %>
       <p class="logo">PIXAPI</p>
       <div class="ui large buttons">
-      <% if current_user %>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "signout ui inverted button"%> 
-     <% else %>
-      
-      <a href="/users/sign_in"><button class="ui inverted button">Sign in</button></a>
-      <div class="or"></div>
-      <a href="/users/sign_up"<button class="ui inverted button">Sign up</button></a>
+      <% unless current_user %>
+        <a href="/users/sign_in"><button class="ui inverted button">Sign in</button></a>
+        <div class="or"></div>
+        <a href="/users/sign_up"><button class="ui inverted button">Sign up</button></a>
       <% end %>
     </div>
 
