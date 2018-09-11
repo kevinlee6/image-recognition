@@ -1,10 +1,14 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
-
+ 
   # GET /tags
   # GET /tags.json
   def index
-    @tags = Tag.all
+    @search = Tag.search do
+      fulltext params[:search]
+    end
+    @tags = @search.results
+    
   end
 
   # GET /tags/1
