@@ -41,13 +41,12 @@ class PostsController < ApplicationController
     @vision = Google::Cloud::Vision.new project: project_id
     # The name of the image file to annotate
     file_name = @post.image.service_url
-    pp file_name
     # Performs label detection on the image file
     labels = @vision.image(file_name).labels
 
-    puts "Labels:"
-    labels.each do |label|
-      puts label.description
+    # Create Tags
+    5.times do |i|
+      @post.tags << Tag.create(tag: labels[i].description)
     end
 
     respond_to do |format|

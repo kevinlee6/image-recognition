@@ -1,16 +1,16 @@
-
-
 <div class="ui three stackable cards">
-<% @profile && @profile.posts.each do |post| %>
-  <div class="card">
-    <div class="image">
-  <%= image_tag post.image.service_url %>
-  </div>
-  <div class="content">
-        <a class="header">#tags </a>
+  <% @profile && @profile.posts.each do |post| %>
+    <div class="card">
+      <div class="image">
+        <%= image_tag post.image.service_url %>
       </div>
-  </div>
-<% end %>
+      <div class="content">
+        <% post.tags.each do |tag| %>
+          <%= button_tag tag.tag, class: 'ui primary button' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 <% if @profile %>
@@ -34,7 +34,7 @@
   <div class="footer">Footer</div>
     <button type="button" class="ui secondary button">Edit Profile</button> &nbsp; &nbsp; <button type="button" class="ui button">Cancel</button>
   </div>
-<% end %>
-<% else %>
-<p>This user does not exist!</p>
-<% end %>
+    <% end %>
+  <% else %>
+    <p>This user does not exist!</p>
+  <% end %>
