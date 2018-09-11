@@ -2,7 +2,7 @@
 <%= form_with(model: @user) do |f| %>
   <div class="field">
     <%= f.label :image %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, direct_upload: true %>
   </div>
 
   <%= f.submit 'Submit' %>

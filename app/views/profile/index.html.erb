@@ -1,5 +1,5 @@
 <% @profile.posts.each do |post| %>
-  <%= image_tag post.image %>
+  <%= image_tag post.image.service_url %>
 <% end %>
 
 <% if @profile %>
