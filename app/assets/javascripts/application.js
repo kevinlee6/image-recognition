@@ -16,3 +16,6 @@
 //= require_tree .
 //= require jquery
 
+
+setTimeout("$('.alert').fadeOut(2000)",100);
+

@@ -52,7 +52,7 @@ class PostsController < ApplicationController
         rescue
           tag = Tag.find_by(tag: labels[i].description)
         end
-        @post.tags << tag
+        tag && @post.tags << tag
       end
     end
 
