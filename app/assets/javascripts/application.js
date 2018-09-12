@@ -19,3 +19,22 @@
 
 setTimeout("$('.alert').fadeOut(2000)",100);
 
+$(function (){
+
+    let controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            triggerHook: 'onLeave'
+        }
+    });
+
+    let slides = document.querySelectorAll("sectrion.panel");
+
+    for(let i=0; i <slides.length; i++){
+        new ScrollMagic.Scene({
+            triggerElement: slides[i]
+        })
+        .setPin(slides[i])
+        .addIndicators()
+        .addTo(controller);
+    }
+});
