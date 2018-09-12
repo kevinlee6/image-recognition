@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post '/:profile/new', to: 'posts#create'
   root 'page#home'
   get '/page/faq', to: 'page#faq'
+  post '/search', to: 'page#search', as: 'search'
 end

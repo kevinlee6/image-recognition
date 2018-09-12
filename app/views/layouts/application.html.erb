@@ -44,15 +44,23 @@
       <% end %>
     </div>
 
-    <div class="ui fluid category search">
-      <div class="ui icon input">
-        <input class="prompt" type="text" placeholder="SEARCH">
-        <i class="large search icon"></i>
-      </div>
-      <div class="results">
+    <%= form_tag "/search", controller: 'page', action: 'search', class: 'ui fluid category search' do %>
+        <div class="ui icon input">
+          <%= select_tag(:select, options_for_select([['User', 'user'], ['Tag', 'tag']])) %>
+          <%= text_field_tag :search, '', placeholder: 'SEARCH', class: 'prompt' %>
+          <%= button_tag "<i class='large search icon'></i>".html_safe %>
+        </div>
+    <% end %>
 
-      </div>
-    </div>
+<!--    <form class="ui fluid category search">-->
+<!--      <div class="ui icon input">-->
+<!--        <input class="prompt" type="text" placeholder="SEARCH">-->
+<!--        <i class="large search icon"></i>-->
+<!--      </div>-->
+<!--      <div class="results">-->
+
+<!--      </div>-->
+<!--    </form>-->
   </div>
    
     <div id="content" class="pusher">
