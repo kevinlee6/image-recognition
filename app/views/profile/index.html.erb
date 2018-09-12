@@ -6,7 +6,7 @@
       </div>
       <div class="content">
         <% post.tags.each do |tag| %>
-          <%= button_tag tag.tag, class: 'ui primary button' %>
+          <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
         <% end %>
       </div>
     </div>

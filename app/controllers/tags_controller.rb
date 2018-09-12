@@ -10,7 +10,7 @@ class TagsController < ApplicationController
   # GET /tags/1
   # GET /tags/1.json
   def show
-    @posts = @tag.posts.order('created_at desc')
+    @tag && @posts = @tag.posts.order('created_at desc')
   end
 
   # GET /tags/new
