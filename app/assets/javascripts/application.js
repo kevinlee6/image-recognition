@@ -39,8 +39,6 @@ $(function (){
     }
 });
 
-$(document).ready( function() {
-    $('#toggle').click(function () {
-        $('.ui.sidebar').sidebar('toggle');
-    });
+$(document).ready(function() {
+
 });
