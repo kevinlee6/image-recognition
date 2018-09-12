@@ -15,6 +15,7 @@
  */
 
  @import 'footer';
+ @import 'home';
 body {
     margin:0px !important;
 }
@@ -149,24 +150,6 @@ body.pushable {
     width: 69px;
 }
 
-#welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #84CAE7;
-    height: 900px;
-    padding: 0px;
-    margin-top: 0px;
-    width: auto;
-    
-}
-#wlc {
-    padding: 20px;
-    font-size: 60px;
-    color: white;
-}
-
 .ui.cards >.card >.image{
     display: flex;
     align-items: center;
@@ -192,44 +175,5 @@ body.pushable {
   color: white;
 }
 
-.panel {
-    height: 100%;
-    width: 100%;
-}
 
-.panel.truil{
-    height: 900px;
-    background: #4CE0D2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.imgtext{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    color: white;
-    
-}
-
-.imgtext h3{
-    font-size: 60px;
-    padding: 30px;
-}
-
-.panel.lightblue{
-    height: 900px;
-    background: #22AAA1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.panel.green{
-    height: 900px;
-    background: #136F63;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
