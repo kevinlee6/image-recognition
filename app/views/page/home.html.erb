@@ -1,41 +1,61 @@
-
-<section class="panel blue">
-<div id="welcome">
-
-<h1 id="wlc">Welcome to PIXAPI</h1>
-<div class="ui large buttons">
-<a href="/users/sign_up"<button class="ui inverted button">Get started</button></a>
-</div>
-</div>
-</section>
-<section class="panel truil">
+<% if current_user %>
+  <div class="ui three stackable cards">
+    <% @posts.each do |post| %>
+      <div class="card">
+        <div class="content">
+          <h3><a href="/<%= post.user.username%>"><%= post.user.username %></a></h3>
+        </div>
+        <div class="image">
+          <%= image_tag post.image.service_url %>
+        </div>
+        <div class="content">
+          <% post.tags.each do |tag| %>
+            <%= button_tag tag.tag, class: 'ui primary button' %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <section class="panel blue">
+    <div id="welcome">
+      <h1 id="wlc">Welcome to PIXAPI</h1>
+      <div class="ui large buttons">
+        <a href="/users/sign_up"<button class="ui inverted button">Get started</button></a>
+      </div>
+    </div>
+  </section>
+  <section class="panel truil">
    <div class="imgtext">
-   <img src="https://media.giphy.com/media/LXgqRWilGJyLbYtgog/giphy.gif">
-   <h3> Easily detect broad 
-   <br>
-   sets of objects 
-   <br>
-   in your images. </h3>
+     <img src="https://media.giphy.com/media/LXgqRWilGJyLbYtgog/giphy.gif">
+     <h3> Easily detect broad
+     <br>
+     sets of objects
+     <br>
+     in your images. </h3>
    </div>
-</section>
-<section class="panel lightblue">
-<div class="imgtext">
-<img src="https://media.giphy.com/media/4N727YhwuoIX6N04CK/giphy.gif">
-<h3>from flowers, 
-<br>
-animals, or transportation 
-<br>to thousands of other 
-<br>
-object </h3>
-</div>
-</section>
-<section class="panel green">
-<div class="imgtext">
-<img src="https://media.giphy.com/media/2iihQaPamAQFsIKNQD/giphy.gif">
-<h3>Your tags created
-<br>
- at the click of 
- <br>
- the <button class="ui inverted button">button</button></h3>
-</div>
-</section>
+  </section>
+  <section class="panel lightblue">
+    <div class="imgtext">
+      <img src="https://media.giphy.com/media/4N727YhwuoIX6N04CK/giphy.gif">
+      <h3>from flowers,
+      <br>
+      animals, or transportation
+      <br>to thousands of other
+      <br>
+      object </h3>
+    </div>
+  </section>
+  <section class="panel green">
+    <div class="imgtext">
+      <img src="https://media.giphy.com/media/2iihQaPamAQFsIKNQD/giphy.gif">
+      <h3>Your tags created
+      <br>
+       at the click of
+       <br>
+       the <button class="ui inverted button">button</button></h3>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+<% end %>
