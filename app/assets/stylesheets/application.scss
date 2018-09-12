@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
+@import 'footer';
 
- @import 'footer';
 body {
     margin:0px !important;
 }
@@ -233,3 +233,6 @@ body.pushable {
     justify-content: center;
 }
 
+.ui.primary.button {
+  margin: 2px;
+}
