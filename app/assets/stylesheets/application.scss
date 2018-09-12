@@ -65,11 +65,6 @@ body.pushable {
    margin:0px;
 }
 
-#content {
-//    padding:20px;
-
-}
-
 #signup {
    margin-top: 50px;
    margin: auto;
@@ -91,23 +86,28 @@ body.pushable {
   width: 735px;
 }
 
-.ui.vertical.inverted.menu .item:before {
-    background: linear-gradient(to right,rgba(255, 255, 255, 0)0,rgba(255, 255, 255, 0)50%,rgba(255, 255, 255, 0)100%);
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
-}
+// .ui.vertical.inverted.menu .item:before {
+//     background-color: #041B15;
+//     // background: linear-gradient(to right,rgba(255, 255, 255, 0)0,rgba(255, 255, 255, 0)50%,rgba(255, 255, 255, 0)100%);
+//     // background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+// }
 
-.ui.inverted.menu .item:before {
-    background: linear-gradient(rgba(255, 255, 255, 0)0,rgba(255, 255, 255, 0)50%,rgba(255 ,255, 255, 0)100%);
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%)
-}
-.ui.vertical.menu .item:before {
-    background: linear-gradient(to right,rgba(0, 0, 0, 0)0,rgba(0, 0, 0, 0)1.5em,rgba(0, 0, 0, 0)100%);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 1.5em, rgba(0, 0, 0, 0) 100%);
-}
+// .ui.inverted.menu .item:before {
+//     background: linear-gradient(rgba(255, 255, 255, 0)0,rgba(255, 255, 255, 0)50%,rgba(255 ,255, 255, 0)100%);
+//     background-image: linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%)
+// }
+// .ui.vertical.menu .item:before {
+//     background: linear-gradient(to right,rgba(0, 0, 0, 0)0,rgba(0, 0, 0, 0)1.5em,rgba(0, 0, 0, 0)100%);
+//     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 1.5em, rgba(0, 0, 0, 0) 100%);
+// }
 
-.ui.menu .item:before {
-    background: linear-gradient(rgba(0, 0, 0, 0)0,rgba(0, 0, 0, 0)50%,rgba(0, 0, 0, 0)100%);
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+// .ui.menu .item:before {
+//     background: linear-gradient(rgba(0, 0, 0, 0)0,rgba(0, 0, 0, 0)50%,rgba(0, 0, 0, 0)100%);
+//     background-image: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+// }
+
+.ui.left.sidebar{
+    background-color: #041B15;
 }
 
 .ui.inverted.menu .item {
@@ -202,9 +202,7 @@ body.pushable {
     height: 100%;
     width: 100%;
 }
-.panel.blue{
-    // margin-bottom: 400px;
-}
+
 .panel.truil{
     height: 900px;
     background: #4CE0D2;
