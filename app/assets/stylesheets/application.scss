@@ -1,8 +1,7 @@
-@import 'footer';
-@import 'home';
+@import './partials/*';
 
 body {
-    margin:0px !important;
+    margin: 0 !important;
 }
 .top-nav {
    display: flex;
