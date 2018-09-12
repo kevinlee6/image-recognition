@@ -1,3 +1,5 @@
+
+
 <div class="ui three stackable cards">
   <% @profile && @posts.each do |post| %>
     <div class="card">
@@ -13,28 +15,3 @@
   <% end %>
 </div>
 
-<% if @profile %>
-  <%# if current_user %>
-    <%#= form_for(@user) do |f| %>
-      <%#= f.file_field :image %>
-      <%#= f.file_field :uploads, multiple: true %>
-    <%# end %>
-  <%# end %>
-
-  <% if current_user == @profile %>
-  <!-- Button trigger modal -->
-  <a><button type="button" id="edit" class="ui button">Edit Profile</button></a>
-
-  <!-- Modal -->
-  <div class="ui longer modal">
-  <div class="header">Header</div>
-  <div class="scrolling content">
-    <p>Very long content goes here</p>
-  </div>
-  <div class="footer">Footer</div>
-    <button type="button" class="ui secondary button">Edit Profile</button> &nbsp; &nbsp; <button type="button" class="ui button">Cancel</button>
-  </div>
-    <% end %>
-  <% else %>
-    <p>This user does not exist!</p>
-  <% end %>
