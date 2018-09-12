@@ -10,7 +10,7 @@
         </div>
         <div class="content">
           <% post.tags.each do |tag| %>
-            <%= button_tag tag.tag, class: 'ui primary button' %>
+            <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
           <% end %>
         </div>
       </div>
@@ -21,7 +21,7 @@
     <div id="welcome">
       <h1 id="wlc">Welcome to PIXAPI</h1>
       <div class="ui large buttons">
-        <a href="/users/sign_up"<button class="ui inverted button">Get started</button></a>
+        <a href="/users/sign_up"><button class="ui inverted button">Get started</button></a>
       </div>
     </div>
   </section>
