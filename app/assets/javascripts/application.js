@@ -50,3 +50,7 @@ document.addEventListener("turbolinks:load", function() {
         $('.ui.sidebar').sidebar('toggle');
     });
 });
+
+
+
+
