@@ -36,5 +36,11 @@
   </div>
     <% end %>
   <% else %>
-    <p>This user does not exist!</p>
+  <div class="error-page">
+    <center><h1>Oops, sorry!</h1>
+    <%= image_tag('404.jpg', class: "404") %>
+    <h1>This user page is not found!</h1>
+    <br>
+    <a href="/"><button class="ui primary button">Go Back to Home</button></center></a>
+  </div>
   <% end %>
