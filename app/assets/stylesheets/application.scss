@@ -133,12 +133,6 @@ body.pushable {
     margin-right: 1rem;
 }
 
-.carousel-control-prev {
-    a:visited {
-    color: none;
-    }
-}
-
 .pic {
     margin-left: auto;
     margin-right: auto;
@@ -167,7 +161,7 @@ body.pushable {
     padding: 20px;
 }
 
-.ui.cards>.card>.image{
+.ui.cards >.card >.image{
     display: flex;
     align-items: center;
     width: 100%;
