@@ -19,8 +19,6 @@
 
 setTimeout("$('.alert').fadeOut(2000)",100);
 
-
-
 $(function () { // wait for document ready
       // init
       var controller = new ScrollMagic.Controller({
@@ -42,6 +40,13 @@ $(function () { // wait for document ready
           .addTo(controller);
       }
     });
-$(document).ready(function() {
 
+document.addEventListener("turbolinks:load", function() {
+    $('#avatar-container').hover(function() {
+        $('#edit-avatar').toggle();
+    });
+
+    $('#toggle').click(function () {
+        $('.ui.sidebar').sidebar('toggle');
+    });
 });
