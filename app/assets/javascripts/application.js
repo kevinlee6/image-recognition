@@ -38,3 +38,9 @@ $(function (){
         .addTo(controller);
     }
 });
+
+$(document).ready( function() {
+    $('#toggle').click(function () {
+        $('.ui.sidebar').sidebar('toggle');
+    });
+});
