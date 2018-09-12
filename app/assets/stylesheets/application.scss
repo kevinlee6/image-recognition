@@ -1,7 +1,7 @@
 @import './partials/*';
 
 body {
-    margin: 0 !important;
+    margin:0px !important;
 }
 .top-nav {
    display: flex;
@@ -39,6 +39,7 @@ body {
 }
 
 .ui.icon.input, .ui.fluid.category.search {
+
     height:45px;
     font-size:15px;
 }
@@ -155,6 +156,15 @@ body.pushable {
 .alert-notice {
   background: green;
   color: white;
+}
+
+.ui.three.cards{
+    padding: 70px;
+}
+
+.edit{
+    display: flex;
+    padding: 5px;
 }
 
 .ui.primary.button {
