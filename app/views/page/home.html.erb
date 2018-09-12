@@ -1,20 +1,22 @@
 <% if current_user %>
-  <div class="ui three stackable cards">
-    <% @posts.each do |post| %>
-      <div class="card">
-        <div class="content">
-          <h3><a href="/<%= post.user.username%>"><%= post.user.username %></a></h3>
+  <div class="container">
+    <div class="ui three stackable cards">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <div class="content">
+            <h3><a href="/<%= post.user.username%>"><%= post.user.username %></a></h3>
+          </div>
+          <div class="image">
+            <%= image_tag post.image.service_url %>
+          </div>
+          <div class="content">
+            <% post.tags.each do |tag| %>
+              <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
+            <% end %>
+          </div>
         </div>
-        <div class="image">
-          <%= image_tag post.image.service_url %>
-        </div>
-        <div class="content">
-          <% post.tags.each do |tag| %>
-            <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 <% else %>
   <section class="panel blue">

@@ -16,30 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-
 setTimeout("$('.alert').fadeOut(2000)",100);
-
-$(function () { // wait for document ready
-      // init
-      var controller = new ScrollMagic.Controller({
-        globalSceneOptions: {
-          triggerHook: 'onLeave'
-        }
-      });
-
-      // get all slides
-      var slides = document.querySelectorAll("section.panel");
-
-      // create scene for every slide
-      for (var i=0; i<slides.length; i++) {
-        new ScrollMagic.Scene({
-            triggerElement: slides[i]
-          })
-          .setPin(slides[i])
-          
-          .addTo(controller);
-      }
-});
 
 document.addEventListener("turbolinks:load", function() {
     $('#avatar-container').hover(function() {
@@ -51,4 +28,26 @@ document.addEventListener("turbolinks:load", function() {
     });
 
     $('.ui.accordion').accordion();
+});
+
+$(document).ready(function () {
+    if (document.getElementsByClassName('panel').length) {
+        var controller = new ScrollMagic.Controller({
+            globalSceneOptions: {
+                triggerHook: 'onLeave'
+            }
+        });
+
+        // get all slides
+        var slides = document.querySelectorAll("section.panel");
+
+        // create scene for every slide
+        for (var i=0; i<slides.length; i++) {
+            new ScrollMagic.Scene({
+                triggerElement: slides[i]
+            })
+                .setPin(slides[i])
+                .addTo(controller);
+        }
+    }
 });

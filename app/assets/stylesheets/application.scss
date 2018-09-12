@@ -1,7 +1,7 @@
 @import './partials/*';
 
 body {
-    margin:0px !important;
+    margin: 0 !important;
 }
 .top-nav {
    display: flex;
@@ -9,120 +9,51 @@ body {
    justify-content: space-between;
    align-items: center;
    background-color: #1ab7ea;
-   padding-left:10px;
-   padding-right:10px;
+   padding: 0 10px;
    margin:0;
 }
 
 #toggle {
-    padding:13px;
+    padding: 13px;
     flex-direction: column;
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
+
     .menutext {
-        color:white;
-        font-size:15px;
-        margin-top:2px;
+        color: white;
+        font-size: 15px;
+        margin-top: 2px;
     }
 }
 
 .logo {
-    font-size:24px;
-    color:white;
-    margin:0;
+    font-size: 24px;
+    color: white;
+    margin: 0;
     flex: 1 1 auto;
-    padding:10px;
+    padding: 10px;
 }
 
 #toggle:hover {
     background-color: #11a5d6;
 }
 
-.ui.icon.input, .ui.fluid.category.search {
+#signup, #login {
+   margin: 3vh auto;
+   width: 30vw;
 
-    height:45px;
-    font-size:15px;
-}
+  a {
+    display: block;
+    margin: 2vh 0;
+  }
 
-body.pushable {
-   background: #cce2ff !important;
-   margin:0px;
-}
-
-#signup {
-   margin-top: 50px;
-   margin: auto;
-   margin-top: 100px;
-   width: 300px;
-}
-
-#login {
-   margin-top: 50px;
-   margin: auto;
-   margin-top: 100px;
-   width: 300px;
-}
-
-.ui.card {
-  margin-left: auto;
-  margin-right: auto;
-  height: 600px;
-  width: 735px;
-}
-
-// .ui.vertical.inverted.menu .item:before {
-//     background-color: #041B15;
-//     // background: linear-gradient(to right,rgba(255, 255, 255, 0)0,rgba(255, 255, 255, 0)50%,rgba(255, 255, 255, 0)100%);
-//     // background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
-// }
-
-// .ui.inverted.menu .item:before {
-//     background: linear-gradient(rgba(255, 255, 255, 0)0,rgba(255, 255, 255, 0)50%,rgba(255 ,255, 255, 0)100%);
-//     background-image: linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%)
-// }
-// .ui.vertical.menu .item:before {
-//     background: linear-gradient(to right,rgba(0, 0, 0, 0)0,rgba(0, 0, 0, 0)1.5em,rgba(0, 0, 0, 0)100%);
-//     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 1.5em, rgba(0, 0, 0, 0) 100%);
-// }
-
-// .ui.menu .item:before {
-//     background: linear-gradient(rgba(0, 0, 0, 0)0,rgba(0, 0, 0, 0)50%,rgba(0, 0, 0, 0)100%);
-//     background-image: linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
-// }
-
-.ui.left.sidebar{
-    background-color: #041B15;
-}
-
-.ui.inverted.menu .item {
-    text-align: center;
-}
-
-.ui.medium.circular.image {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ui.menu .item {
-    font-size: 1.5rem;
-    bottom: -70px;
-}
-
-.ui.medium.image {
-    width: 180px;
-}
-
-.ui.buttons {
-    margin-right: 1.8rem;
-}
-
-.ui.fluid.category.search {
-    margin-right: 1rem;
+  .back {
+    width: 40%;
+  }
 }
 
 .pic {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 #mainlogo {
@@ -133,55 +64,19 @@ body.pushable {
     width: 69px;
 }
 
-.ui.cards >.card >.image{
+.delete{
     display: flex;
-    align-items: center;
-    width: 100%;
-    height: 400px;
-}
-.ui.cards>.card>.image>img {
-    max-width: 100%;
-    max-height: 100%;
-}
+    flex-direction: column;
+    margin-top: 3vh;
 
-.alert {
-  padding: 10px;
-  position: absolute;
-  top: 9vh;
-  width: 100vw;
-  text-align: center;
-}
-
-.alert-alert {
-  background: #a70000;
-  color: white;
-}
-
-.alert-notice {
-  background: green;
-  color: white;
-}
-
-.ui.three.cards{
-    padding: 70px;
-}
-
-.edit{
-    display: flex;
-    padding: 5px;
-}
-
-.ui.primary.button {
-  margin: 2px;
+  form {
+    text-align: center;
+  }
 }
 
 #avatar-container {
-  margin: 52px auto 0 auto;
+  margin: 3vh auto -5vh auto;
   width: 70%;
-  
-  &:hover {
-    cursor: pointer;
-  }
 
   span {
     position: absolute;
@@ -202,6 +97,15 @@ body.pushable {
   }
 }
 
-.error-page {
-    margin-top: 90px;
+.flex {
+  display: flex;
+  align-items: center;
+
+  input {
+    margin: 0 10px;
+  }
+}
+
+.container {
+  margin: 3vh 5vw;
 }

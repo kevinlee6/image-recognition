@@ -1,22 +1,22 @@
-<% if @tag %>
-  <h1><%= @tag.tag %></h1>
-  <div class="ui three stackable cards">
-    <% @posts.each do |post| %>
-      <div class="card">
-        <div class="image">
-          <%= image_tag post.image.service_url %>
+<div class="container">
+  <%= link_to 'Back', tags_path , class: 'ui button grey' %>
+  <% if @tag %>
+    <h1><%= @tag.tag %></h1>
+    <div class="ui three stackable cards">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <div class="image">
+            <%= image_tag post.image.service_url %>
+          </div>
+          <div class="content">
+            <% post.tags.each do |tag| %>
+              <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
+            <% end %>
+          </div>
         </div>
-        <div class="content">
-          <% post.tags.each do |tag| %>
-            <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  <%= link_to 'Edit', edit_tag_path(@tag) %> |
-  <%= link_to 'Back', tags_path %>
-<% else %>
-  <p>There is no associated tag.</p>
-<% end %>
+      <% end %>
+    </div>
+  <% else %>
+    <p>There is no associated tag.</p>
+  <% end %>
+</div>
