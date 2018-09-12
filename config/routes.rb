@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root 'page#home'
   get '/page/faq', to: 'page#faq'
   post '/search', to: 'page#search', as: 'search'
+  get '/page/dashboard', to: 'page#dashboard'
 end

@@ -19,26 +19,29 @@
 
 setTimeout("$('.alert').fadeOut(2000)",100);
 
-$(function (){
 
-    let controller = new ScrollMagic.Controller({
+
+$(function () { // wait for document ready
+      // init
+      var controller = new ScrollMagic.Controller({
         globalSceneOptions: {
-            triggerHook: 'onLeave'
+          triggerHook: 'onLeave'
         }
-    });
+      });
 
-    let slides = document.querySelectorAll("sectrion.panel");
+      // get all slides
+      var slides = document.querySelectorAll("section.panel");
 
-    for(let i=0; i <slides.length; i++){
+      // create scene for every slide
+      for (var i=0; i<slides.length; i++) {
         new ScrollMagic.Scene({
             triggerElement: slides[i]
-        })
-        .setPin(slides[i])
-        .addIndicators()
-        .addTo(controller);
-    }
-});
-
+          })
+          .setPin(slides[i])
+          
+          .addTo(controller);
+      }
+    });
 $(document).ready(function() {
 
 });

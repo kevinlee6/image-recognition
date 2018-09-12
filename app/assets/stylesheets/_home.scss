@@ -1,0 +1,58 @@
+#welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #84CAE7;
+    height: 900px;
+    padding: 0px;
+    margin-top: 0px;
+    width: auto;
+    
+}
+#wlc {
+    padding: 20px;
+    font-size: 60px;
+    color: white;
+}
+
+.panel {
+    height: 100vh;
+    width: 100vw;
+}
+
+.panel.truil{
+    height: 100vh;
+    background: #4CE0D2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgtext{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.imgtext h3{
+    font-size: 60px;
+    padding: 30px;
+}
+
+.panel.lightblue{
+    height: 100vh;
+    background: #22AAA1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel.green{
+    height: 100vh;
+    background: #136F63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

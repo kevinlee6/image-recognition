@@ -4,7 +4,10 @@ class PageController < ApplicationController
 
   def faq
   end
-
+  
+  def dashboard
+    @posts = Post.all.order("created_at DESC")
+  end
   def search
     if params[:select] == 'user'
       redirect_to "/#{params[:search]}"

@@ -1,19 +1,5 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 @import 'footer';
+@import 'home';
 
 body {
     margin:0px !important;
@@ -54,8 +40,6 @@ body {
 }
 
 .ui.icon.input, .ui.fluid.category.search {
-//    margin-left: 1150px;
-//    margin-top:7px; 
     height:45px;
     font-size:15px;
 }
@@ -149,24 +133,6 @@ body.pushable {
     width: 69px;
 }
 
-#welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #84CAE7;
-    height: 900px;
-    padding: 0px;
-    margin-top: 0px;
-    width: auto;
-    
-}
-#wlc {
-    padding: 20px;
-    font-size: 60px;
-    color: white;
-}
-
 .ui.cards >.card >.image{
     display: flex;
     align-items: center;
@@ -190,47 +156,6 @@ body.pushable {
 .alert-notice {
   background: green;
   color: white;
-}
-
-.panel {
-    height: 100%;
-    width: 100%;
-}
-
-.panel.truil{
-    height: 900px;
-    background: #4CE0D2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.imgtext{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    color: white;
-    
-}
-
-.imgtext h3{
-    font-size: 60px;
-    padding: 30px;
-}
-
-.panel.lightblue{
-    height: 900px;
-    background: #22AAA1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.panel.green{
-    height: 900px;
-    background: #136F63;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .ui.primary.button {
