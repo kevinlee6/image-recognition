@@ -45,3 +45,7 @@ $(function () { // wait for document ready
 $(document).ready(function() {
 
 });
+
+$(document).ready(function() {
+  $('.ui.accordion').accordion(); 
+});
