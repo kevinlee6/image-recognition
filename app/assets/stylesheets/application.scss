@@ -11,8 +11,8 @@ body {
    justify-content: space-between;
    align-items: center;
    background-color: #1ab7ea;
-   padding: 0 10px;
-   margin:0;
+   padding: 10px 10px;
+   margin: 0;
 }
 
 #toggle {
@@ -29,11 +29,12 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     color: white;
-    margin: 0;
+    margin-left: 16px;
+    margin-bottom: -1px;
     flex: 1 1 auto;
-    padding: 10px;
+    padding: -2px;
 }
 
 #toggle:hover {
@@ -58,14 +59,6 @@ body {
     margin: 0 auto;
 }
 
-#mainlogo {
-    padding: 5px;
-    margin-left: 6px;
-    margin-bottom: 2px;
-    height: 69px;
-    width: 69px;
-}
-
 .delete{
     display: flex;
     flex-direction: column;
@@ -82,7 +75,7 @@ body {
 
   #edit-avatar {
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     bottom: 484px;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -95,7 +88,7 @@ body {
 
   #edit {
     color: white;
-    margin-top: 60px;
+    margin-top: 65px;
   }
 
   .big.inverted.white.edit.icon {
