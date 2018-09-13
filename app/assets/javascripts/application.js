@@ -36,10 +36,10 @@ $(function () { // wait for document ready
             triggerElement: slides[i]
           })
           .setPin(slides[i])
-          
           .addTo(controller);
       }
     });
+});
 
 document.addEventListener("turbolinks:load", function() {
     $('#avatar-container').hover(function() {
@@ -49,4 +49,6 @@ document.addEventListener("turbolinks:load", function() {
     $('#toggle').click(function () {
         $('.ui.sidebar').sidebar('toggle');
     });
+  
+    $('.ui.accordion').accordion(); 
 });
