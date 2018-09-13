@@ -19,8 +19,6 @@
 
 setTimeout("$('.alert').fadeOut(2000)",100);
 
-
-
 $(function () { // wait for document ready
       // init
       var controller = new ScrollMagic.Controller({
@@ -38,14 +36,19 @@ $(function () { // wait for document ready
             triggerElement: slides[i]
           })
           .setPin(slides[i])
-          
           .addTo(controller);
       }
     });
-$(document).ready(function() {
-
 });
 
-$(document).ready(function() {
-  $('.ui.accordion').accordion(); 
+document.addEventListener("turbolinks:load", function() {
+    $('#avatar-container').hover(function() {
+        $('#edit-avatar').toggle();
+    });
+
+    $('#toggle').click(function () {
+        $('.ui.sidebar').sidebar('toggle');
+    });
+  
+    $('.ui.accordion').accordion(); 
 });

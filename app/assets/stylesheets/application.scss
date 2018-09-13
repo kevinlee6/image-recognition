@@ -4,6 +4,7 @@ body {
     margin: 0 !important;
     background-color: #F6F6F6;
 }
+
 .top-nav {
    display: flex;
    flex-direction: row;
@@ -40,6 +41,7 @@ body {
 }
 
 .ui.icon.input, .ui.fluid.category.search {
+
     height:45px;
     font-size:15px;
 }
@@ -158,8 +160,44 @@ body.pushable {
   color: white;
 }
 
+.ui.three.cards{
+    padding: 70px;
+}
+
+.edit{
+    display: flex;
+    padding: 5px;
+}
+
 .ui.primary.button {
   margin: 2px;
+}
+
+#avatar-container {
+  margin: 52px auto 0 auto;
+  width: 70%;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    position: absolute;
+    background: rgba(211, 211, 211, 0.4);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    height: 20%;
+    text-align: center;
+    width: 75%;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .error-page {

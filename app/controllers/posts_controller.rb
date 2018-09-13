@@ -33,6 +33,11 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    unless post_params[:image]
+      flash[:alert] = 'You must upload an image'
+      redirect_to "/#{current_user.username}/new"
+      return
+    end
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     project_id = ENV["GOOGLE_APPLICATION_CREDENTIALS"]
