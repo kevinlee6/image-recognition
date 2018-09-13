@@ -1,11 +1,10 @@
-<h1>Tags</h1>
+<div class="container">
+  <h1>Tags</h1>
+  <div class="ui three stackable cards">
+    <% @tags.each do |tag| %>
 
-<div class="ui three stackable cards">
-  <% @tags.each do |tag| %>
-    
-    <%= link_to tag.tag.upcase, tag_path(tag.tag), class: 'ui primary button', :id=>"tagbtn"  %>
-  <% end %>
+      <%= link_to tag.tag.upcase, tag_path(tag.tag), class: 'ui primary button', :id=>"tagbtn"  %>
+    <% end %>
+  </div>
+  <br>
 </div>
-<br>
-
-<%= link_to 'New Tag', new_tag_path %>

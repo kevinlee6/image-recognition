@@ -13,21 +13,24 @@
   </head>
 
   <body>
-    <div class="ui sidebar vertical left inverted menu">
-      <div id="avatar-container">
-        <span id="edit-avatar" style="display: none">
-          <h3>Edit</h3>
-        </span>
-        <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/jenny.jpg">
-      </div>
-      <a class="item" href="/page/dashboard">Home</a>
-      <%if current_user %>
+    <% if current_user %>
+      <div class="ui sidebar vertical left inverted menu">
+        <h2><%= current_user.username %></h2>
+        <div id="avatar-container">
+          <a href="/users/edit">
+             <span id="edit-avatar" style="display: none">
+            <h3>Edit</h3>
+          </span>
+            <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/jenny.jpg">
+          </a>
+        </div>
+        <a class="item" href="/">Home</a>
         <a class="item" href="/<%= current_user.username%>">Profile</a>
-      <%end%>
-      <a class="item" href="/page/faq">FAQ</a>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "item"%> 
-    </div>
-    
+        <a class="item" href="/page/faq">FAQ</a>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "item"%>
+      </div>
+    <% end %>
+
     <div class="top-nav">
     <% if current_user %>
       <a id="toggle" class="item">
@@ -47,7 +50,7 @@
 
     <%= form_tag "/search", controller: 'page', action: 'search', class: 'ui fluid category search' do %>
         <div class="ui icon input">
-          <%= select_tag(:select, options_for_select([['User', 'user'], ['Tag', 'tag']])) %>
+          <%= select_tag(:select, options_for_select([['User', 'user'], ['Tag', 'tag']]), class: 'ui dropdown') %>
           <%= text_field_tag :search, '', placeholder: 'SEARCH', class: 'prompt' %>
           <%= button_tag "<i class='large search icon'></i>".html_safe %>
         </div>

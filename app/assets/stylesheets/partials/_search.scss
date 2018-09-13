@@ -1,0 +1,14 @@
+.ui.icon.input {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+
+  button {
+    border-radius: 10px;
+    height: 40px;
+  }
+
+  &>* {
+    margin: 0 2px;
+  }
+}
