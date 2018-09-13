@@ -1,0 +1,9 @@
+<div id="edit-avatar">
+  <h2>Change avatar</h2>
+  <%= form_with(model: @profile, url: "avatar", html: { method: :post }) do |f| %>
+    <%= f.file_field :avatar, direct_upload: true %>
+    <br />
+    <br />
+    <%= f.submit %>
+  <% end %>
+</div>
