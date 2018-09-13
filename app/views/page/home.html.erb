@@ -6,7 +6,7 @@
           <div class="content">
             <h3><a href="/<%= post.user.username%>"><%= post.user.username %></a></h3>
           </div>
-          <div class="image loop">
+          <div class="image loop" onclick="toggleModal(<%= i %>)">
             <%= image_tag post.image.service_url %>
           </div>
           <div class="content">
@@ -17,37 +17,32 @@
         </div>
 
         <div class="ui modal <%= "test#{i}" %>">
-  <i class="close icon"></i>
-  <div class="header">
-    <%= post.user.username.upcase %>   <em>title:</em><%=post.title%>
-  </div>
-  
-  <div class="image content">
-    <div class="ui massive image">
-      <%= image_tag post.image.service_url %>
-       <div class="content">
-            <% post.tags.each do |tag| %>
-              <%= link_to "# #{tag.tag}", tag_path(tag.tag), class: 'ui primary button' %>
-            <% end %>
+          <i class="close icon"></i>
+          <div class="header">
+            <%= post.user.username.upcase %>   <em>title:</em><%=post.title%>
           </div>
-    </div>
+  
+          <div class="image content">
+            <div class="ui massive image">
+              <%= image_tag post.image.service_url %>
+              <div class="content">
+                <% post.tags.each do |tag| %>
+                  <%= link_to "# #{tag.tag}", tag_path(tag.tag), class: 'ui primary button' %>
+                <% end %>
+              </div>
+            </div>
    
-    <div class="description">
-      <h3>Coments</h3>
-      
-      
-    </div>
-   
-  </div>
-  <div class="actions">
-   
-    <div class="ui positive right labeled icon button">
-      Done
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
-  </div>
-
+            <div class="description">
+              <h3>Comments</h3>
+            </div>
+        </div>
+        <div class="actions">
+          <div class="ui positive right labeled icon button">
+            Done
+            <i class="checkmark icon"></i>
+          </div>
+        </div>
+      </div>
       <% end %>
     </div>
   </div>
