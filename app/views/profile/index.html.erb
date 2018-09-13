@@ -12,7 +12,7 @@
              <i class="trash alternate outline icon"></i>
           <%end%>
           </h3>
-          <div class="image loop">
+          <div class="image loop" onclick="toggleModal(<%= i %>)">
             <%= image_tag post.image.service_url %>
           </div>
           <div class="content">

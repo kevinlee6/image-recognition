@@ -18,6 +18,10 @@
 
 setTimeout("$('.alert').fadeOut(2000)",100);
 
+var toggleModal = function(i){
+    $(".test" + i).modal('show');
+};
+
 document.addEventListener("turbolinks:load", function() {
     $('#avatar-container').hover(function() {
         $('#edit-avatar').toggle();
@@ -28,16 +32,6 @@ document.addEventListener("turbolinks:load", function() {
     });
 
     $('.ui.accordion').accordion();
-
-    var i = -1;
-    $(function(){
-        $(".loop").click(function(){
-            $(".test" + i++).modal('show');
-        });
-        $(".test" + i++).modal({
-            closable: true
-        });
-    });
 });
 
 $(document).ready(function () {
