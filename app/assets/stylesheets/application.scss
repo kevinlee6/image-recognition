@@ -111,3 +111,8 @@ body {
 .container {
   margin: 3vh 5vw;
 }
+
+#edit-container {
+  display: flex;
+  justify-content: space-between;
+}
