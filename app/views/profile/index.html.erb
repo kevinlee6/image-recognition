@@ -1,24 +1,27 @@
-<% if current_user == @profile %>
-    <div class="ui three stackable cards">
-    <% @profile && @posts.each do |post| %>
-      <div class="card">
-        <div class="image">
-          <%= image_tag post.image.service_url %>
+<div class="container">
+  <% if current_user == @profile %>
+      <div class="ui three stackable cards">
+      <% @profile && @posts.each do |post| %>
+        <div class="card">
+          <div class="image">
+            <%= image_tag post.image.service_url %>
+          </div>
+          <div class="content">
+            <% post.tags.each do |tag| %>
+              <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
+            <% end %>
+          </div>
         </div>
-        <div class="content">
-          <% post.tags.each do |tag| %>
-            <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% else %>
-  <div class="error-page">
-    <center><h1>Oops, sorry!</h1>
-      <%= image_tag('404.jpg', class: "404") %>
-      <h1>This user page is not found!</h1>
-      <br>
-      <a href="/"><button class="ui primary button">Go Back to Home</button></center></a>
-  </div>
-<% end %>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="error-page">
+      <center><h1>Oops, sorry!</h1>
+        <%= image_tag('404.jpg', class: "404") %>
+        <h1>This user page is not found!</h1>
+        <br>
+        <a href="/"><button class="ui primary button">Go Back to Home</a>
+      </center>
+    </div>
+  <% end %>
+</div>
