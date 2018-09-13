@@ -1,5 +1,7 @@
+<div id="signup">
 <h1>New Post</h1>
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', "/#{current_user.username}" %>
+</div>

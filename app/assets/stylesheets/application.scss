@@ -112,7 +112,16 @@ body {
   margin: 3vh 5vw;
 }
 
-#edit-container {
-  display: flex;
-  justify-content: space-between;
+input[type="file"] {
+  display: none;
+}
+
+.ui.form .field>label {
+  margin-right: 250px;
+}
+
+#createpost{
+  position: absolute;
+  margin-left: 200px;
+  margin-top: -40px;
 }
