@@ -7,6 +7,7 @@
       <div class="ui three stackable cards">
       <% @profile && @posts.each do |post| %>
         <div class="card">
+          <h3><%= post.title %></h3>
           <div class="image">
             <%= image_tag post.image.service_url %>
           </div>
@@ -24,7 +25,7 @@
         <%= image_tag('404.jpg', class: "404") %>
         <h1>This user page is not found!</h1>
         <br>
-        <a href="/"><button class="ui primary button">Go Back to Home</a>
+        <a href="/"><button class="ui primary button">Go Back to Home</button></a>
       </center>
     </div>
   <% end %>
