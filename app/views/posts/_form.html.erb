@@ -1,3 +1,4 @@
+<div class="ui form" id="signup">
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -11,11 +12,23 @@
     </div>
   <% end %>
 
-  <div class="actions">
+  
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-    <%= form.submit %>
-  </div>
+    </div>
+    <div class="field">
+    <label for="embedpollfileinput" class="ui huge green right floated button">
+    <i class="ui upload icon"></i> 
+    Upload image
+    </label>
+    <%= form.file_field :image, :id=>"embedpollfileinput"%>
+    </div>
+    <div class="field">
+    <div class="actions">
+    <%= form.submit "Create Post", :class=>"ui button", :id=>"createpost" %>
+    </div>
+    </div>
+ 
 <% end %>
+</div>

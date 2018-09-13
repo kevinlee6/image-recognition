@@ -1,4 +1,8 @@
 <div class="container">
+
+<%= link_to "/#{current_user.username}/new", :class=>"massive ui button" do %>
+  <i class="plus icon"></i> Add new post
+<% end %>
   <% if current_user == @profile %>
       <div class="ui three stackable cards">
       <% @profile && @posts.each do |post| %>

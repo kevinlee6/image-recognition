@@ -111,3 +111,17 @@ body {
 .container {
   margin: 3vh 5vw;
 }
+
+input[type="file"] {
+  display: none;
+}
+
+.ui.form .field>label {
+  margin-right: 250px;
+}
+
+#createpost{
+  position: absolute;
+  margin-left: 200px;
+  margin-top: -40px;
+}
