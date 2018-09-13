@@ -52,3 +52,12 @@ $(document).ready(function () {
     }
 });
 
+var i = -1;
+$(function(){
+	$(".loop").click(function(){
+		$(".test" + i++).modal('show');
+	});
+	$(".test" + i++).modal({
+		closable: true
+    });
+});

@@ -1,14 +1,18 @@
 <div class="container">
 
-<%= link_to "/#{current_user.username}/new", :class=>"massive ui button" do %>
+<%= link_to "/#{current_user.username}/new", :class=>"massive ui primary button", :id=>"newpost" do %>
   <i class="plus icon"></i> Add new post
 <% end %>
   <% if current_user == @profile %>
       <div class="ui three stackable cards">
-      <% @profile && @posts.each do |post| %>
+      <% @profile && @posts.each_with_index do |post, i| %>
         <div class="card">
-          <h3><%= post.title %></h3>
-          <div class="image">
+          <h3 id="postheader"><%= post.title %> 
+          <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' }  do%>
+             <i class="trash alternate outline icon"></i>
+          <%end%>
+          </h3>
+          <div class="image loop">
             <%= image_tag post.image.service_url %>
           </div>
           <div class="content">
@@ -17,6 +21,33 @@
             <% end %>
           </div>
         </div>
+
+
+        <div class="ui modal <%= "test#{i}" %>">
+  <i class="close icon"></i>
+  <div class="header">
+    <%=post.title%>
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+
+    </div>
+   
+    <div class="description">
+      <h3>90 John Street</h3>
+      <h3>New York, NY</h3>
+      <h3>Phone: 212 996 9797</h3>
+      
+    </div>
+  </div>
+  <div class="actions">
+   
+    <div class="ui positive right labeled icon button">
+      Done
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+  </div>
       <% end %>
     </div>
   <% else %>
@@ -30,3 +61,6 @@
     </div>
   <% end %>
 </div>
+
+
+ 

@@ -130,3 +130,14 @@ input[type="file"] {
 #content {
   min-height: 70vh;
 }
+
+#postheader{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 4px auto;
+}
+
+#newpost{
+   margin-bottom: 20px;
+}
