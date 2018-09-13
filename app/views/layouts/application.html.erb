@@ -17,11 +17,12 @@
       <div class="ui sidebar vertical left inverted menu">
         <h2><%= current_user.username %></h2>
         <div id="avatar-container">
+          <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/jenny.jpg">
           <a href="/users/edit">
-             <span id="edit-avatar" style="display: none">
-            <h3>Edit</h3>
-          </span>
-            <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/jenny.jpg">
+        <div id="edit-avatar" style="display: none">
+          <h3 id="edit">Edit</h3>
+          <i class="big inverted white edit icon"></i>
+        </div>
           </a>
         </div>
         <a class="item" href="/">Home</a>
