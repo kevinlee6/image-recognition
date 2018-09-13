@@ -80,18 +80,26 @@ body {
   margin: 3vh auto -5vh auto;
   width: 70%;
 
-  span {
+  #edit-avatar {
     position: absolute;
-    background: rgba(211, 211, 211, 0.4);
-    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 484px;
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 1;
-    border-bottom-left-radius: 300px;
-    border-bottom-right-radius: 300px;
-    height: 20%;
     text-align: center;
-    width: 75%;
+    height: 183px;
+    width: 183px;
+    border-radius: 50%;
+  }
+
+  #edit {
+    color: white;
+    margin-top: 60px;
+  }
+
+  .big.inverted.white.edit.icon {
+    margin-left: 15.5px;
   }
 
   img {
