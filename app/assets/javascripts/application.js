@@ -28,6 +28,16 @@ document.addEventListener("turbolinks:load", function() {
     });
 
     $('.ui.accordion').accordion();
+
+    var i = -1;
+    $(function(){
+        $(".loop").click(function(){
+            $(".test" + i++).modal('show');
+        });
+        $(".test" + i++).modal({
+            closable: true
+        });
+    });
 });
 
 $(document).ready(function () {
@@ -51,4 +61,3 @@ $(document).ready(function () {
         }
     }
 });
-
