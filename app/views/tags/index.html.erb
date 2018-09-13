@@ -3,7 +3,7 @@
   <div class="ui three stackable cards">
     <% @tags.each do |tag| %>
 
-      <%= link_to tag.tag.upcase, tag_path(tag.tag), class: 'ui primary button', :id=>"tagbtn"  %>
+      <%= link_to "# #{tag.tag.upcase}", tag_path(tag.tag), class: 'ui primary button', :id=>"tagbtn"  %>
     <% end %>
   </div>
   <br>

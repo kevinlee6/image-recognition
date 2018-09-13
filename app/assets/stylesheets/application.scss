@@ -141,3 +141,10 @@ input[type="file"] {
 #newpost{
    margin-bottom: 20px;
 }
+
+.loop{
+  &:hover {
+    opacity: .8;
+     cursor: pointer;
+  }
+}

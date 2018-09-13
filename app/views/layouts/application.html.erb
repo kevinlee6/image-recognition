@@ -27,6 +27,7 @@
         </div>
         <a class="item" href="/">Home</a>
         <a class="item" href="/<%= current_user.username%>">Profile</a>
+        <a class="item" href="/tags">Tags</a>
         <a class="item" href="/page/faq">FAQ</a>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete , :class => "item"%>
       </div>
