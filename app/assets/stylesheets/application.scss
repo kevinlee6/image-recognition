@@ -1,44 +1,45 @@
 @import './partials/*';
 
 body {
-    margin: 0 !important;
-    background-color: #F6F6F6;
+  margin: 0 !important;
+  background-color: #F6F6F6;
 }
 
 .top-nav {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   background-color: #1ab7ea;
-   padding: 10px 10px;
-   margin: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1ab7ea;
+  padding: 10px 10px;
+  margin: 0;
 }
 
 #toggle {
-    padding: 13px;
-    flex-direction: column;
-    text-align: center;
-    cursor: pointer;
+  padding: 13px;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
 
-    .menutext {
-        color: white;
-        font-size: 15px;
-        margin-top: 2px;
-    }
+  .menutext {
+    color: white;
+    font-size: 15px;
+    margin-top: 2px;
+  }
 }
 
 .logo {
-    font-size: 30px;
-    color: white;
-    margin-left: 16px;
-    margin-bottom: -1px;
-    flex: 1 1 auto;
-    padding: -2px;
+  font-size: 30px;
+  color: white;
+  margin-left: 16px;
+  margin-bottom: -1px;
+  flex: 1 1 auto;
+  padding: -2px;
 }
 
 #toggle:hover {
-    background-color: #11a5d6;
+  background-color: #11a5d6;
 }
 
 #signup, #login {
@@ -200,4 +201,10 @@ input[type="file"] {
 #upload-submit {
   display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 500px) {
+  #github-container, .logo:not(:first-child) {
+    display: none;
+  }
 }
