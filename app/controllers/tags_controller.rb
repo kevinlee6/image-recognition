@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  include ::ApplicationHelper
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
 
   # GET /tags
@@ -10,6 +11,8 @@ class TagsController < ApplicationController
   # GET /tags/1
   # GET /tags/1.json
   def show
+    @search = search(params[:id], 'brooklyn')
+    # pp @search
     @tag && @posts = @tag.posts.order('created_at desc')
   end
 

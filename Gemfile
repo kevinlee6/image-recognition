@@ -5,6 +5,7 @@ ruby '2.5.1'
 gem "aws-sdk-s3", require: false
 gem 'devise'
 gem 'google-cloud-vision'
+gem 'http'
 gem 'progress_bar'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

@@ -34,23 +34,24 @@
     <% end %>
 
     <div class="top-nav">
-    <% if current_user %>
-      <a id="toggle" class="item">
-        <i class="big white sidebar icon"></i>
-        <p class="menutext">Menu</p>
-      </a>
-    <% end %>
-      <%= link_to image_tag('Logo.png', class: 'logo', width: '72', height: '72'), "/" %>
-      <p class="logo">PIXAPI</p>
-      <div class="ui large buttons">
+      <div id="top-nav-left">
+        <% if current_user %>
+          <a id="toggle" class="item">
+            <i class="big white sidebar icon"></i>
+            <p class="menutext">Menu</p>
+          </a>
+        <% end %>
+        <%= link_to image_tag('Logo.png', class: 'logo', width: '72', height: '72'), "/" %>
+        <a href="/" class="logo">PIXAPI</a>
+      </div>
       <% unless current_user %>
-        <a href="/users/sign_in"><button class="ui inverted button">Sign in</button></a>
-        <div class="or"></div>
-        <a href="/users/sign_up"><button class="ui inverted button">Sign up</button></a>
+        <div class="ui large buttons">
+            <a href="/users/sign_in"><button class="ui inverted button">Sign in</button></a>
+            <div class="or"></div>
+            <a href="/users/sign_up"><button class="ui inverted button">Sign up</button></a>
+        </div>
       <% end %>
-    </div>
-
-    <%= form_tag "/search", controller: 'page', action: 'search', class: 'ui fluid category search' do %>
+      <%= form_tag "/search", controller: 'page', action: 'search', class: 'ui fluid category search' do %>
         <div class="ui large icon input">
           <%= select_tag(:select, options_for_select([['User', 'user'], ['Tag', 'tag']]), class: 'ui dropdown') %>
           <%= text_field_tag :search, '', placeholder: 'SEARCH' %>

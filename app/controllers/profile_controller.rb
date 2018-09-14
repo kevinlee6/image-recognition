@@ -3,6 +3,8 @@ class ProfileController < ApplicationController
   def index
     if @profile
       @posts = @profile.posts.order 'created_at desc'
+      # @search = search('sushi', 'queens')
+      # pp @search
     end
   end
 
