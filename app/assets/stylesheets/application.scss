@@ -6,6 +6,7 @@ body {
 }
 
 .top-nav {
+  overflow: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

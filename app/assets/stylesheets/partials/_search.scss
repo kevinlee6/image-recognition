@@ -1,15 +1,18 @@
-.ui.icon.input {
-  font-size: 1.1em;
-  display: flex;
-  align-items: center;
+.ui.fluid.category.search {
+  text-align: right;
 
-  button {
-    border-radius: 10px;
-    height: 40px;
-    width: 43px;
-  }
+  .ui.icon.input {
+    font-size: 1.1em;
+    align-items: center;
 
-  &>* {
-    margin: 0 4px;
+    button {
+      border-radius: 10px;
+      height: 40px;
+      width: 43px;
+    }
+
+    &>* {
+      margin: 0 4px;
+    }
   }
 }
