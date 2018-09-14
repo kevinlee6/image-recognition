@@ -102,13 +102,14 @@ body {
 #avatar-container {
   margin: 3vh auto -5vh auto;
   width: 70%;
+  position: absolute;
+  left: 15%;
+  top: 10%;
 
   #edit-avatar {
+    top: 0;
     position: absolute;
     background: rgba(0, 0, 0, 0.6);
-    bottom: 484px;
-    left: 50%;
-    transform: translate(-50%, 0%);
     z-index: 1;
     text-align: center;
     height: 183px;
@@ -128,6 +129,12 @@ body {
   img {
     width: 100%;
   }
+}
+
+#nav-links {
+  position: absolute;
+  top: 30%;
+  width: 100%;
 }
 
 .flex {
