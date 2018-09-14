@@ -43,7 +43,8 @@ body {
 
 #signup, #login {
    margin: 3vh auto;
-   width: 30vw;
+   width: 80vw;
+   max-width: 500px;
 
   a {
     display: block;
@@ -117,15 +118,15 @@ input[type="file"] {
   display: none;
 }
 
-.ui.form .field>label {
-  margin-right: 250px;
-}
-
-#createpost{
-  position: absolute;
-  margin-left: 200px;
-  margin-top: -40px;
-}
+//.ui.form .field>label {
+//  margin-right: 250px;
+//}
+//
+//#createpost{
+//  position: absolute;
+//  margin-left: 200px;
+//  margin-top: -40px;
+//}
 
 #content {
   min-height: 70vh;
@@ -194,4 +195,9 @@ input[type="file"] {
       }
     }
   }
+}
+
+#upload-submit {
+  display: flex;
+  justify-content: space-around;
 }
