@@ -14,9 +14,18 @@ body {
   padding: 10px 10px;
   margin: 0;
 
+  & > * {
+    flex: 1 1 0;
+  }
+
   #top-nav-left {
     display: flex;
     align-items: center;
+  }
+
+  .ui.large.buttons {
+    margin: auto;
+    justify-content: center;
   }
 }
 

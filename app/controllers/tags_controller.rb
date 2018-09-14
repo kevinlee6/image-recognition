@@ -11,9 +11,11 @@ class TagsController < ApplicationController
   # GET /tags/1
   # GET /tags/1.json
   def show
-    @search = search(params[:id], 'brooklyn')
-    # pp @search
-    @tag && @posts = @tag.posts.order('created_at desc')
+    if @tag
+      @posts = @tag.posts.order('created_at desc')
+      @search = search(params[:id], 'new york')
+      pp @search
+    end
   end
 
   # GET /tags/new

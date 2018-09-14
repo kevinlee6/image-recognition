@@ -38,6 +38,7 @@ class PostsController < ApplicationController
       redirect_to "/#{current_user.username}/new"
       return
     end
+
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     project_id = ENV["GOOGLE_APPLICATION_CREDENTIALS"]
@@ -47,7 +48,13 @@ class PostsController < ApplicationController
     # The name of the image file to annotate
     file_name = @post.image.service_url
     # Performs label detection on the image file
-    labels = @vision.image(file_name).labels
+    begin
+      labels = @vision.image(file_name).labels
+    rescue
+      flash[:alert] = 'There was an error processing the image. Please try again.'
+      redirect_to "/#{current_user.username}/new"
+      return
+    end
 
     # Create Tags
     5.times do |i|

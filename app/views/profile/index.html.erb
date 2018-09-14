@@ -3,16 +3,18 @@
 <%= link_to "/#{current_user.username}/new", :class=>"massive ui primary button", :id=>"newpost" do %>
   <i class="plus icon"></i> Add new post
 <% end %>
-  <% if current_user == @profile %>
+  <% if @profile %>
     <div class="ui three stackable cards">
       <% @posts.each_with_index do |post, i| %>
         <div class="card">
           <div class="content">
             <h3 class="postheader">
               <%= post.title == '' ? 'untitled' : post.title %>
-              <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' }  do%>
-                <i class="trash alternate outline icon"></i>
-              <%end%>
+              <% if @profile == current_user %>
+                <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' }  do%>
+                  <i class="trash alternate outline icon"></i>
+                <%end%>
+              <% end %>
             </h3>
           </div>
           <div class="image loop" onclick="toggleModal(<%= i %>)">
@@ -61,7 +63,7 @@
         <%= image_tag('404.jpg', class: "404") %>
         <h1>This user page is not found!</h1>
         <br>
-        <a href="/"><button class="ui primary button">Go Back to Home</button></a>
+        <a href="/"><button class="ui primary button">Home Page</button></a>
       </center>
     </div>
   <% end %>

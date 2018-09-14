@@ -9,3 +9,9 @@ User.create!(
   email: 'nycda@email.com',
   password: 'password'
 )
+
+User.create!(
+  username: 'kevin',
+  email: 'kevin@email.com',
+  password: 'password'
+)

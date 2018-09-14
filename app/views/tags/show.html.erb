@@ -48,7 +48,36 @@
         </div>
       <% end %>
     </div>
+    <h2>Local businesses</h2>
+    <div id="yelp-container">
+      <div class="ui three stackable cards">
+        <% @search['businesses'].each do |x| %>
+          <div class="card">
+            <div class="content">
+              <a href="<%= x['url'] %>"><h3><%= x['name'] %></h3></a>
+            </div>
+            <div class="image">
+              <%= image_tag x['image_url'] %>
+            </div>
+            <div class="content">
+              <ul>Address:
+                <% x['location']['display_address'].each do |address| %>
+                  <li><%= address %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   <% else %>
-    <p>There is no associated tag.</p>
+    <div class="error-page">
+      <center><h1>Oops, sorry!</h1>
+        <%= image_tag('404.jpg', class: "404") %>
+        <h1>This page does not exist!</h1>
+        <br>
+        <a href="/"><button class="ui primary button">Home Page</button></a>
+      </center>
+    </div>
   <% end %>
 </div>
