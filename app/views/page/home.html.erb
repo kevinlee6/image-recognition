@@ -19,30 +19,31 @@
         <div class="ui modal <%= "test#{i}" %>">
           <i class="close icon"></i>
           <div class="header">
-            <%= post.user.username.upcase %>   <em>title:</em><%=post.title%>
+            <%= link_to post.user.username, "/#{post.user.username}" %>
           </div>
-  
-          <div class="image content">
-            <div class="ui massive image">
-              <%= image_tag post.image.service_url %>
-              <div class="content">
-                <% post.tags.each do |tag| %>
-                  <%= link_to "# #{tag.tag}", tag_path(tag.tag), class: 'ui primary button' %>
-                <% end %>
+          <span><%=post.title%></span>
+          <div class="modal-inner-container">
+            <div class="image content">
+              <div class="ui massive image">
+                <%= image_tag post.image.service_url %>
+                <div class="content">
+                  <% post.tags.each do |tag| %>
+                    <%= link_to "# #{tag.tag}", tag_path(tag.tag), class: 'ui primary button' %>
+                  <% end %>
+                </div>
               </div>
             </div>
-   
             <div class="description">
               <h3>Comments</h3>
             </div>
-        </div>
-        <div class="actions">
-          <div class="ui positive right labeled icon button">
-            Done
-            <i class="checkmark icon"></i>
           </div>
+<!--          <div class="actions">-->
+<!--            <div class="ui positive right labeled icon button">-->
+<!--              Done-->
+<!--              <i class="checkmark icon"></i>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
-      </div>
       <% end %>
     </div>
   </div>

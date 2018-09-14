@@ -4,49 +4,50 @@
   <i class="plus icon"></i> Add new post
 <% end %>
   <% if current_user == @profile %>
-      <div class="ui three stackable cards">
-      <% @profile && @posts.each_with_index do |post, i| %>
+    <div class="ui three stackable cards">
+      <% @posts.each_with_index do |post, i| %>
         <div class="card">
-          <h3 id="postheader"><%= post.title %> 
-          <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' }  do%>
-             <i class="trash alternate outline icon"></i>
-          <%end%>
-          </h3>
+          <div class="content">
+            <h3><%= post.title %></h3>
+          </div>
           <div class="image loop" onclick="toggleModal(<%= i %>)">
             <%= image_tag post.image.service_url %>
           </div>
           <div class="content">
             <% post.tags.each do |tag| %>
-              <%= link_to "# #{tag.tag}", tag_path(tag.tag), class: 'ui primary button' %>
+              <%= link_to tag.tag, tag_path(tag.tag), class: 'ui primary button' %>
             <% end %>
           </div>
         </div>
+
         <div class="ui modal <%= "test#{i}" %>">
-  <i class="close icon"></i>
-  <div class="header">
-    <%=post.title%>
-  </div>
-  <div class="image content">
-    <div class="ui massive image">
-      <%= image_tag post.image.service_url %>
-       <div class="content">
-            <% post.tags.each do |tag| %>
-              <%= link_to "# #{tag.tag}", tag_path(tag.tag), class: 'ui primary button' %>
-            <% end %>
+          <i class="close icon"></i>
+          <div class="header">
+            <%= link_to post.user.username, "/#{post.user.username}" %>
           </div>
-    </div>
-   
-    <div class="description">
-      <h3>Comments</h3>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui positive right labeled icon button">
-      Done
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
-  </div>
+          <span><%=post.title%></span>
+          <div class="modal-inner-container">
+            <div class="image content">
+              <div class="ui massive image">
+                <%= image_tag post.image.service_url %>
+                <div class="content">
+                  <% post.tags.each do |tag| %>
+                    <%= link_to "# #{tag.tag}", tag_path(tag.tag), class: 'ui primary button' %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <div class="description">
+              <h3>Comments</h3>
+            </div>
+          </div>
+<!--          <div class="actions">-->
+<!--            <div class="ui positive right labeled icon button">-->
+<!--              Done-->
+<!--              <i class="checkmark icon"></i>-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
       <% end %>
     </div>
   <% else %>

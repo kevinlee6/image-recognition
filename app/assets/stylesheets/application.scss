@@ -148,3 +148,50 @@ input[type="file"] {
      cursor: pointer;
   }
 }
+
+.ui.modal {
+  width: 80%;
+  max-height: 95%;
+
+  .close {
+    top: 0;
+    right: 0;
+    color: red;
+  }
+
+  .header {
+    padding: 10px 15px;
+  }
+
+  span {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+
+  .modal-inner-container {
+    display: flex;
+    width: 95%;
+    margin: 10px auto;
+
+    .image.content {
+      width: 55%;
+      margin-right: 30px;
+
+      .ui.massive.image {
+        img {
+          margin: auto;
+          max-height: 60vh;
+        }
+      }
+
+      .content {
+        width: 80%;
+        margin: 15px auto 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}
