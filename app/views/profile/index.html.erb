@@ -32,9 +32,9 @@
           <div class="header">
             <%= link_to post.user.username, "/#{post.user.username}" %>
           </div>
-          <span><%=post.title%></span>
           <div class="modal-inner-container">
             <div class="image content">
+              <h3><%=post.title%></h3>
               <div class="ui massive image">
                 <%= image_tag post.image.service_url %>
                 <div class="content">
@@ -45,15 +45,9 @@
               </div>
             </div>
             <div class="description">
-              <h3>Comments</h3>
+                <%= commontator_thread(post) %>
             </div>
           </div>
-<!--          <div class="actions">-->
-<!--            <div class="ui positive right labeled icon button">-->
-<!--              Done-->
-<!--              <i class="checkmark icon"></i>-->
-<!--            </div>-->
-<!--          </div>-->
         </div>
       <% end %>
     </div>

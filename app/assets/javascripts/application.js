@@ -32,6 +32,11 @@ document.addEventListener("turbolinks:load", function() {
     });
 
     $('.ui.accordion').accordion();
+
+    var threads = document.getElementsByClassName('thread');
+    for (let i = 0; i < threads.length; i++) {
+        threads[i].children[0].click();
+    }
 });
 
 $(document).ready(function () {
