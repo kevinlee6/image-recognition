@@ -6,10 +6,6 @@ class ProfileController < ApplicationController
     end
   end
 
-  def post
-
-  end
-
   def new
   end
 
