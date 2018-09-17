@@ -43,7 +43,6 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     project_id = ENV["VISION_CREDENTIALS"]
 
-
     # Instantiates a client
     @vision = Google::Cloud::Vision.new project: project_id
     # The name of the image file to annotate
