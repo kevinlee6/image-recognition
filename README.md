@@ -1,24 +1,26 @@
-# README
+# [Image Recognition app](https://pixapi-image.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Sample homepage after login. Images and tags present](/public/sample-homepage.png)
 
-Things you may want to cover:
+Image recognition app built with Ruby on Rails.
 
-* Ruby version
+Collaborative project between:
 
-* System dependencies
+- [Kevin](https://github.com/kevinlee6)
+- [Mesuara](https://github.com/mesuara)
+- [Jennifer](https://github.com/jevargasv)
+- [Sharna](https://github.com/sharnajh)
 
-* Configuration
+Image recognition services provided via [Google's Cloud Vision API](https://cloud.google.com/vision/). A maximum of 5 descriptive tags is generated per image.
 
-* Database creation
+Image hosting services provided via [Amazon's S3 Buckets](https://aws.amazon.com/s3/).
 
-* Database initialization
+Yelp API was included in this app to provide relevance for the tags,
 
-* How to run the test suite
+Features:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Account creation (authenticated with [Devise](https://github.com/plataformatec/devise))
+- Sign-in with either email or username
+- Image upload
+- Auto-generated tags
+- Yelp recommendations on tag page
